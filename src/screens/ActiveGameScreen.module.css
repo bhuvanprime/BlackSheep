@@ -1,0 +1,59 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: var(--spacing-lg) 0;
+  text-align: center;
+}
+
+.instruction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  max-width: 80%;
+}
+
+.stepNum {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.instruction h2 {
+  font-size: 1.5rem;
+}
+
+.instruction p {
+  color: var(--text-muted);
+}
+
+.timerCard {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin: var(--spacing-xl) 0;
+}
+
+.timeText {
+  font-size: 3rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.hurry {
+  color: var(--accent-color);
+}

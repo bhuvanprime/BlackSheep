@@ -1,0 +1,76 @@
+.bannerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  background-color: #000;
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.bannerImageWrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bannerImage {
+  height: 100%;
+  width: auto;
+  transform: scale(1.03); /* This scales the image past the wrapper to clip the edges */
+  border: none;
+  outline: none;
+}
+
+.settingsList {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.itemLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.emojiIcon {
+  font-size: 1.5rem;
+  width: 32px;
+  text-align: center;
+}
+
+.itemLabel {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.itemRight {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  cursor: pointer;
+}
+
+.valueText {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.minutesLabel {
+  margin-left: var(--spacing-xs);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.actionArea {
+  margin-top: auto;
+  padding: var(--spacing-xl) 0;
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,128 @@
+:root {
+  --primary-color: #000000;
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --text-main: #111111;
+  --text-muted: #666666;
+  --accent-color: #ff3366; /* playful red for imposters */
+  --safe-color: #33cc66; /* safe green for civilians */
+  --border-color: #eaeaea;
+  
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  user-select: none; /* Good for games to prevent accidental selection */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 600px; /* Constrain for web, mobile-first look */
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  position: relative;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input {
+  font-family: inherit;
+}
+
+.primary-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-full);
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  transition: transform 0.1s ease;
+}
+
+.primary-btn:active {
+  transform: scale(0.97);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  border: 1px solid var(--border-color);
+}
+
+.screen-container {
+  padding: var(--spacing-lg);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: var(--spacing-sm);
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.flex-1 { flex: 1; }
