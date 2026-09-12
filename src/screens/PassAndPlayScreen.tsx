@@ -33,7 +33,7 @@ export function PassAndPlayScreen() {
     if (navigator.vibrate) navigator.vibrate(50);
     setIsRevealed(true);
     setHasRevealedThisTurn(true);
-    
+
     // Auto close after 3 seconds
     setTimeout(() => {
       setIsRevealed(false);
@@ -50,7 +50,7 @@ export function PassAndPlayScreen() {
       <div className={styles.header}>
         <div className={styles.headerLeft}>
           <span className={styles.emojiIcon}>🕵️</span>
-          <span>Guess the Imposter</span>
+          <span>Black Sheep</span>
         </div>
         <button className={styles.closeBtn} onClick={cancelGame}>
           <X size={24} />
@@ -60,7 +60,7 @@ export function PassAndPlayScreen() {
       <div className={styles.mainContent}>
         <AnimatePresence mode="wait">
           {!isRevealed ? (
-            <motion.div 
+            <motion.div
               key="hidden"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ export function PassAndPlayScreen() {
               transition={{ duration: 0.3 }}
               className={styles.hiddenState}
             >
-              <div 
+              <div
                 className={styles.tapCard}
                 style={{ position: 'relative' }}
                 onClick={handleRevealClick}
@@ -80,7 +80,7 @@ export function PassAndPlayScreen() {
                 <p className={styles.tapSubtitle}>Tap to reveal</p>
                 <TapHint visible={true} top="50%" left="50%" />
               </div>
-              
+
               {hasRevealedThisTurn ? (
                 <div className={styles.nextAction} style={{ marginTop: 'var(--spacing-xl)' }}>
                   <button className="primary-btn" onClick={handleNext}>
@@ -97,7 +97,7 @@ export function PassAndPlayScreen() {
               )}
             </motion.div>
           ) : (
-            <motion.div 
+            <motion.div
               key="revealed"
               initial={{ opacity: 0, y: 200, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -112,7 +112,7 @@ export function PassAndPlayScreen() {
                 <div className={styles.cardHeader}>
                   <h3>{currentPlayer.name}</h3>
                 </div>
-                
+
                 <div className={styles.cardBody}>
                   {isImposter ? (
                     <div className={styles.roleInfo}>
