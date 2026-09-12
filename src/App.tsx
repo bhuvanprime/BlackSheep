@@ -8,7 +8,7 @@ import { GameOverScreen } from './screens/GameOverScreen';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<SettingsScreen />} />
         <Route path="/players" element={<PlayersScreen />} />
