@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGameStore } from '../store/useGameStore';
-import { X, Check, User } from 'lucide-react';
+import { X, Check } from 'lucide-react';
 import { TapHint } from '../components/TapHint';
 import styles from './PassAndPlayScreen.module.css';
 
