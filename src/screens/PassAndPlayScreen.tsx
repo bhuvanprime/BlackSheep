@@ -117,7 +117,7 @@ export function PassAndPlayScreen() {
                   {isImposter ? (
                     <div className={styles.roleInfo}>
                       <div className={styles.roleIconBad}><X size={32} color="white" /></div>
-                      <h2 className={styles.roleName}>Imposter</h2>
+                      <h2 className={styles.roleName}>Black Sheep</h2>
                       {settings.hintsEnabled && gameState.secretHints?.length > 0 && (
                         <div className={styles.hintsContainer}>
                           <p className={styles.hintCategory}>Hint:</p>
