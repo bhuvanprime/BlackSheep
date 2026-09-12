@@ -74,7 +74,7 @@ export function PassAndPlayScreen() {
                 onClick={handleRevealClick}
               >
                 <div className={styles.tapIconContainer}>
-                  <img src="/chitti.jpg" alt="Avatar" className={styles.avatarImage} />
+                  <img src={`${import.meta.env.BASE_URL}chitti.jpg`} alt="Avatar" className={styles.avatarImage} />
                 </div>
                 <h2 className={styles.tapPlayerName}>{currentPlayer.name}</h2>
                 <p className={styles.tapSubtitle}>Tap to reveal</p>
@@ -107,7 +107,7 @@ export function PassAndPlayScreen() {
             >
               <div className={`${styles.roleCard} ${isImposter ? styles.imposterCard : styles.civilianCard}`}>
                 <div className={styles.cardBanner}>
-                  <img src={isImposter ? "/imposter_avatar.png" : "/player_avatar.png"} alt="Role Banner" className={styles.cardBannerImg} />
+                  <img src={`${import.meta.env.BASE_URL}${isImposter ? 'imposter_avatar.png' : 'player_avatar.png'}`} alt="Role Banner" className={styles.cardBannerImg} />
                 </div>
                 <div className={styles.cardHeader}>
                   <h3>{currentPlayer.name}</h3>

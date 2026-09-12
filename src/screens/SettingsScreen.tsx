@@ -22,7 +22,7 @@ export function SettingsScreen() {
     <div className="screen-container">
       <div className={styles.bannerContainer}>
         <div className={styles.bannerImageWrapper}>
-          <img src="/banner.png" alt="Black Sheep" className={styles.bannerImage} />
+          <img src={`${import.meta.env.BASE_URL}banner.png`} alt="Black Sheep" className={styles.bannerImage} />
         </div>
       </div>
 
