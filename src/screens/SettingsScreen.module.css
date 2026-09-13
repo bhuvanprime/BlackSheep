@@ -69,8 +69,12 @@
 }
 
 .actionArea {
+  position: sticky;
+  bottom: 0;
+  background-color: var(--card-bg);
+  padding: var(--spacing-md) 0 var(--spacing-xl) 0;
   margin-top: auto;
-  padding: var(--spacing-xl) 0;
   display: flex;
   justify-content: center;
+  z-index: 10;
 }

@@ -11,6 +11,14 @@ export function ActiveGameScreen() {
   const [startingPlayer] = useState(() => {
     const players = gameState.currentRoundPlayers;
     if (!players || players.length === 0) return '';
+    
+    if (!settings.hintsEnabled) {
+      const nonImposters = players.filter(p => !gameState.imposters.includes(p.id));
+      if (nonImposters.length > 0) {
+        return nonImposters[Math.floor(Math.random() * nonImposters.length)].name;
+      }
+    }
+    
     return players[Math.floor(Math.random() * players.length)].name;
   });
 
