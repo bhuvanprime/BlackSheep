@@ -170,15 +170,16 @@ export const useGameStore = create<StoreState>()(
         let currentHistory = gameState.imposterHistory || [];
         
         let nonRepeats = availablePool.filter(id => !currentHistory.includes(id));
+        const actualImpostersCount = settings.impostersCount || 1;
         
         // If we don't have enough players who haven't been an imposter yet,
         // we must clear the history cycle so everyone is eligible again.
-        if (nonRepeats.length < settings.impostersCount) {
+        if (nonRepeats.length < actualImpostersCount) {
           const lastGameImposters = gameState.imposters || [];
           const exceptLast = availablePool.filter(id => !lastGameImposters.includes(id));
           
           // Try to exclude at least the immediate past imposters
-          if (exceptLast.length >= settings.impostersCount) {
+          if (exceptLast.length >= actualImpostersCount) {
              currentHistory = [...lastGameImposters];
              nonRepeats = exceptLast;
           } else {
@@ -192,7 +193,7 @@ export const useGameStore = create<StoreState>()(
 
         // Shuffle and pick imposters
         const shuffledPool = [...availablePool].sort(() => 0.5 - Math.random());
-        const selectedImposters = shuffledPool.slice(0, settings.impostersCount);
+        const selectedImposters = shuffledPool.slice(0, actualImpostersCount);
         
         const nextHistory = [...currentHistory, ...selectedImposters];
 
