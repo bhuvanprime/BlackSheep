@@ -128,7 +128,12 @@ export function PassAndPlayScreen() {
                   ) : (
                     <div className={styles.roleInfo}>
                       <div className={styles.roleIconGood}><Check size={32} color="white" /></div>
-                      <h2 className={styles.secretWord}>{gameState.secretWord}</h2>
+                      <h2 
+                        className={styles.secretWord}
+                        style={gameState.secretWord.length > 8 ? { fontSize: '1.8rem' } : undefined}
+                      >
+                        {gameState.secretWord}
+                      </h2>
                     </div>
                   )}
                 </div>
